@@ -45,10 +45,10 @@ const Handle = () => {
 
   return (
     <div className="flex flex-col md:flex-row">
-      <div className="flex flex-col border-2 border-black">
+      <div className="flex flex-col">
         <MessagePanel />
       </div>
-      <div className="w-full relative">
+      <div className="w-full relative mt-2 md:mt-0">
         <div>
           <div className="flex gap-3 bg-gray-200 md:p-3 p-2.5 cursor-pointer w-full">
             <img

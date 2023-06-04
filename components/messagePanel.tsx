@@ -46,54 +46,41 @@ export default function MessagePanel() {
 
   return (
     <div className="">
-      {/* <div className="w-full md:w-[29.2rem] bg-gray-100 text-gray-900 md:h-screen md:flex flex-col ">
+      <div className="w-96 overflow-auto md:w-[29.2rem] bg-gray-100 text-gray-900 md:h-screen flex flex-row md:flex-col ">
         {users &&
           filteredList?.map((user) => {
             return (
               <div
                 key={user.email}
-                className="flex gap-3 hover:bg-gray-200 md:p-3 p-2.5 cursor-pointer"
+                className={`flex gap-3 hover:bg-gray-200 md:p-3 p-2.5 cursor-pointer    ${
+                  user.handle === router.query.handle && "bg-blue-100"
+                }`}
                 onClick={() => {
                   setSelectedUser(user);
                   router.push(`/p/${user?.email?.split("@")[0].toLowerCase()}`);
                 }}
               >
-                <img
-                  src={user.image as string}
-                  alt={user.name}
-                  className="w-14 h-14 rounded-full"
-                />
-                <div className="flex flex-col w-full items-start flex-1 ">
-                  <h2 className=" font-normal text-lg w-56 truncate">
-                    {user.name}
-                  </h2>
-                  <div className=" w-56 truncate">{user.email}</div>
+                <div className="flex flex-col gap-2 items-center ">
+                  <div className="w-14">
+                    <img
+                      src={user.image as string}
+                      alt={user.name}
+                      className="w-14 h-14 rounded-full"
+                    />
+                  </div>
+                  <p
+                    className={`flex md:hidden    ${
+                      user.handle === router.query.handle
+                        ? "text-[#4656A1]"
+                        : "text-gray-900"
+                    }`}
+                  >
+                    {user.name.split(" ")[0]}
+                  </p>
                 </div>
-              </div>
-            );
-          })}
-      </div> */}
-      <div className="w-full md:w-[29.2rem] bg-gray-100 text-gray-900 md:h-screen flex flex-row md:flex-col ">
-        {users &&
-          filteredList?.map((user) => {
-            return (
-              <div
-                key={user.email}
-                className="flex gap-3 hover:bg-gray-200 md:p-3 p-2.5 cursor-pointer"
-                onClick={() => {
-                  setSelectedUser(user);
-                  router.push(`/p/${user?.email?.split("@")[0].toLowerCase()}`);
-                }}
-              >
-                <img
-                  src={user.image as string}
-                  alt={user.name}
-                  className="w-14 h-14 rounded-full"
-                />
+
                 <div className="hidden md:flex md:flex-col w-full items-start flex-1 ">
-                  <h2 className=" font-normal text-lg w-56 truncate">
-                    {user.name}
-                  </h2>
+                  <h2>{user.name}</h2>
                   <div className=" w-56 truncate">{user.email}</div>
                 </div>
               </div>

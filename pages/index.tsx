@@ -12,7 +12,7 @@ const Index = () => {
           <div>
             <MessagePanel />
           </div>
-          <div className="w-full pt-20 hidden md:flex">
+          <div className="w-full pt-10 hidden md:flex">
             <div className="flex flex-col items-center justify-center w-full">
               <h2 className="text-3xl font-bold text-transparent text-center bg-clip-text bg-gradient-to-r from-[#4656A1] to-blue-600">
                 Choose a profile to start chatting
