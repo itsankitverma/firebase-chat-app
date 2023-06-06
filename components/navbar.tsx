@@ -124,7 +124,7 @@ export default function Navbar() {
                         }}
                         className={classNames(
                           active ? "bg-gray-100" : "",
-                          "block px-4 py-2 text-sm text-gray-700 cursor-pointer mt-3"
+                          "block p-3 bg-[#4656A1] text-white rounded-lg px-4 py-2 text-sm  cursor-pointer mt-3 "
                         )}
                       >
                         Login
