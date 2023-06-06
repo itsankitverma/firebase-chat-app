@@ -46,7 +46,7 @@ export default function MessagePanel() {
 
   return (
     <div className="">
-      <div className="w-96 overflow-auto md:w-[29.2rem] bg-gray-100 text-gray-900 md:h-screen flex flex-row md:flex-col ">
+      <div className="w-[22.5rem] overflow-auto md:w-[29.2rem] bg-gray-100 text-gray-900 md:h-screen flex flex-row md:flex-col ">
         {users &&
           filteredList?.map((user) => {
             return (
