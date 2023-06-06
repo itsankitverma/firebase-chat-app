@@ -98,6 +98,7 @@ export default function Navbar() {
                             <a
                               onClick={() => {
                                 handleSignOut();
+                                router.push("/"):
                               }}
                               className={classNames(
                                 active ? "bg-gray-100" : "",
